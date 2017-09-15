@@ -1,0 +1,105 @@
+body {
+	font: 300 16px "Roboto", "Arial", sans-serif;
+	color: @color;
+}
+
+p {
+	margin: 0 0 10px 0;
+}
+
+.title-logo {
+	font: 400 36px "Roboto", "Arial", sans-serif;
+}
+
+.title-block {
+	position: relative;
+	font: 400 48px "Roboto", "Arial", sans-serif;
+	span {
+		color: @main-color;
+	}
+	&--line {
+		padding-bottom: 30px;
+	    margin-bottom: 30px;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			max-width: 330px;
+			width: 100%;
+			height: 1px;
+			background: @title-line;
+		}
+	}
+}
+
+.title-block_center {
+	position: relative;
+	text-align: center;
+	font: 400 48px "Roboto", "Arial", sans-serif;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+	span {
+		color: @main-color;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		max-width: 330px;
+		width: 100%;
+		height: 1px;
+		background: @title-line;
+	}
+}
+
+.block-ident {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	&.block-img {
+		background: url('img/city.jpg') no-repeat;
+		background-size: cover;
+	}
+	&--top {
+		padding-top: 120px;
+	}
+	.all-news {
+		display: block;
+		margin: 0 auto;
+		margin-top: 40px;
+	}
+}
+
+.text-garant {
+	font: 400 36px "Roboto", "Arial", sans-serif;
+	text-align: center;
+	max-width: 915px;
+	margin: 0 auto;
+	span {
+		color: @main-color;
+	}
+}
+
+.btn {
+	max-width: 255px;
+	width: 100%;
+	padding: 13px 0;
+	background: @main-color;
+	color: @white;
+	cursor: pointer;
+	z-index: 9;
+	.transition();
+	&:hover {
+		background: @hover-color;
+		color: @white;
+	}
+}
+
+@media (min-width: 1340px) {
+	.container-set-lg {
+    	max-width: 1340px;
+    }
+}
